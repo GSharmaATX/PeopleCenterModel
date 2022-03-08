@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.gyanesh</groupId>
-	<artifactId>people-center-model</artifactId>
+	<artifactId>people-center-model-lib</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>People Center Model</name>
 	<description>This library contains data model objects for the People Center application</description>

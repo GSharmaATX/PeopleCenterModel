@@ -12,6 +12,13 @@ import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+/**
+ * Base entity class extended by all entities.
+ * 
+ * @author gyanesh.sharma
+ *
+ * @param <U>
+ */
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public abstract class BaseEntity<U> {
@@ -30,8 +37,8 @@ public abstract class BaseEntity<U> {
 	@LastModifiedDate
 	@Column(name = "LAST_MODIFIED_DATE")
 	private LocalDateTime lastModifiedDate;
-	
-	@Column(name="VERSION")
+
+	@Column(name = "VERSION")
 	private Integer version;
 
 	public U getCreatedBy() {
