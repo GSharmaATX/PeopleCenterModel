@@ -10,6 +10,7 @@ import org.springframework.data.annotation.CreatedBy;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
+import javax.persistence.Version;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 /**
@@ -38,6 +39,7 @@ public abstract class BaseEntity<U> {
 	@Column(name = "LAST_MODIFIED_DATE")
 	private LocalDateTime lastModifiedDate;
 
+	@Version
 	@Column(name = "VERSION")
 	private Integer version;
 
